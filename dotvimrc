@@ -1,0 +1,53 @@
+setlocal number
+setlocal showmode
+setlocal autoindent
+setlocal ruler
+setlocal shiftwidth=4
+"setlocal shm=filmnrwxt
+setlocal showmatch
+setlocal tabstop=4
+setlocal sw=4 et
+setlocal wm=10
+setlocal textwidth=78
+setlocal mouse=c
+setlocal list
+set lcs=tab:>·,extends:<,precedes:>,trail:·
+set smartindent
+
+" esquema de cor
+set bg=dark
+" Comportamento para ediÃ§Ã£o de codigos-fonte
+au BufNew,BufRead *.rb set expandtab  " Ruby source
+au BufNew,BufRead *.sql set expandtab " SQL source
+
+" Mapeamentos
+""" Esconde linhas de comentário
+noremap <F2> :hi Comment ctermfg=black guifg=black<cr>
+noremap <F3> :hi Comment term=bold ctermfg=cyan guifg=cyan<cr>
+""" Limpar espaços no fim da linha
+map ;l  :%s/[\s\t]*$//g<cr>
+""" copiar e colar igual no terminal
+map  <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
+""" completar palavras
+imap <F7> <c-n>
+imap <F8> <c-x><c-n>
+
+" Abreviações para modo comando
+cab W w | cab Wq wq | cab WQ wq | cab wQ wq | cab Q q
+
+" Liga e desliga comentarios
+fu! CommOnOff()
+    if !exists('g:hiddcomm')
+        let g:hiddcomm=1 | hi Comment ctermfg=black guifg=black
+    else
+        unlet g:hiddcomm | hi Comment ctermfg=cyan guifg=cyan term=bold
+    endif
+endfu
+map <F11> :call CommOnOff()<cr>
+
+" muda cor de fundo quando estiver chegando próximo da 80 coluna "
+au BufWinEnter * if &textwidth > 10
+\ | let w:m1=matchadd('MatchParen', printf('\%%<%dv.\%%>%dv', &textwidth+4, &textwidth-5), -1)
+\ | let w:m2=matchadd('ErrorMsg', printf('\%%>%dv.\+', &textwidth+4), -1)
+\ | endif
