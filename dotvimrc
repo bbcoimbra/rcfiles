@@ -1,53 +1,80 @@
-setlocal number
-setlocal showmode
-setlocal autoindent
-setlocal ruler
-setlocal shiftwidth=4
-"setlocal shm=filmnrwxt
-setlocal showmatch
-setlocal tabstop=4
-setlocal sw=4 et
-setlocal wm=10
-setlocal textwidth=78
-setlocal mouse=c
-setlocal list
-set lcs=tab:>·,extends:<,precedes:>,trail:·
+runtime! autoload/pathogen.vim
+
+if exists('g:loaded_pathogen')
+  call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
+end
+
+if has("gui_running")
+    set guioptions=egmrt
+    set showtabline=2
+endif
+
+""" fix for some stupid terms
+if &term == "screen"
+	set term = xterm
+endif
+
+set nocompatible
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set expandtab
+set noeol
+set binary
+
+""" autocomplete config
+set wildmode=list:longest,full
+
+""" show mode in use (insert, visual, ...)
+set showmode
+set showcmd
+
+""" mouse behavior like in terminal (without X)
+set mouse=c
+
+""" no wrap lines (duh!)
+set nowrap
+
+""" indent control
+set autoindent
 set smartindent
 
-" esquema de cor
-set bg=dark
-" Comportamento para ediÃ§Ã£o de codigos-fonte
-au BufNew,BufRead *.rb set expandtab  " Ruby source
-au BufNew,BufRead *.sql set expandtab " SQL source
+""" show match parentesis
+set showmatch
 
-" Mapeamentos
-""" Esconde linhas de comentário
-noremap <F2> :hi Comment ctermfg=black guifg=black<cr>
-noremap <F3> :hi Comment term=bold ctermfg=cyan guifg=cyan<cr>
-""" Limpar espaços no fim da linha
-map ;l  :%s/[\s\t]*$//g<cr>
-""" copiar e colar igual no terminal
-map  <S-Insert> <MiddleMouse>
-map! <S-Insert> <MiddleMouse>
-""" completar palavras
-imap <F7> <c-n>
-imap <F8> <c-x><c-n>
+""" statusline config
+""" %y = file type
+""" %t = file name
+""" %l = current line
+""" %c = current column
+""" %V = current virtual column
+""" %P = position into file
+set laststatus=2
+set statusline=%y\ %t\ %=\ %(%-l,%-c%-V\ %-P%)
 
-" Abreviações para modo comando
-cab W w | cab Wq wq | cab WQ wq | cab wQ wq | cab Q q
+""" show reduced msgs
+set shm=filmnrwxt
 
-" Liga e desliga comentarios
-fu! CommOnOff()
-    if !exists('g:hiddcomm')
-        let g:hiddcomm=1 | hi Comment ctermfg=black guifg=black
-    else
-        unlet g:hiddcomm | hi Comment ctermfg=cyan guifg=cyan term=bold
-    endif
-endfu
-map <F11> :call CommOnOff()<cr>
+set linebreak
 
-" muda cor de fundo quando estiver chegando próximo da 80 coluna "
-au BufWinEnter * if &textwidth > 10
-\ | let w:m1=matchadd('MatchParen', printf('\%%<%dv.\%%>%dv', &textwidth+4, &textwidth-5), -1)
-\ | let w:m2=matchadd('ErrorMsg', printf('\%%>%dv.\+', &textwidth+4), -1)
-\ | endif
+""" insert number into lines
+set number
+
+""" syntax colors
+syntax on
+colorscheme default
+set background=dark
+
+
+filetype on
+filetype indent on
+filetype plugin on
+compiler ruby
+
+nmap <leader>d :NERDTreeToggle<CR>
+nmap <leader>t :TlistToggle<CR>
+nmap <leader>w <c-w>w
+imap <c-space> <c-n>
+
+""" some sanite mappings
+cab WQ wq | cab Wq wq | cab W w | cab Q q
