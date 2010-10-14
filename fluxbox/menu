@@ -16,7 +16,7 @@
 #     session.menuFile: /home/you/.fluxbox/my-menu
 [begin] (Fluxbox-1.0rc3)
       [commanddialog] (run)
-      [exec] (term) {Terminal}
+      [exec] (term) {/usr/bin/xterm}
       [exec] (firefox) {firefox}
       [exec] (thunderbird) {thunderbird}
       [exec] (pidgin) {pidgin}
