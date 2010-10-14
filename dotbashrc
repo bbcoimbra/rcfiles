@@ -3,8 +3,10 @@ HISTSIZE=1024
 CLASSPATH="/usr/lib/java/jre/lib:/usr/lib/java/lib:~/lib/java:.:.."
 export HISTCONTROL HISTSIZE CLASSPATH
 
-LC_COLLATE=c
-export LC_COLLATE
+LANGUAGE=""
+LC_ALL=""
+LC_COLLATE="POSIX"
+export LC_COLLATE LC_ALL LANGUAGE
 
 if [ "$TERM" = "xterm" -o "$TERM" = "screen" ]; then
     export TERM="xterm-color"
