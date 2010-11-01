@@ -1,26 +1,22 @@
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
+# ~/.bash_profile: executed by bash(1) for login shells.
 # see /usr/share/doc/bash/examples/startup-files for examples.
 # the files are located in the bash-doc package.
 
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
+# the default umask is set in /etc/login.defs
 #umask 022
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
+[[ "$TERM" == "xterm" ]] && export TERM="xterm-color"
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+# include .bashrc if it exists
+[[ -f ~/.bashrc ]] && source $HOME/.bashrc
 
-LANG=en_US.utf8
-LC_COLLATE=C
-export LANG LC_COLLATE
+### set Language preferences
+LANGUAGE="en_US"
+LC_ALL="C"
+unset LC_COLLATE
+export LANG=en_US
+export LANGUAGE LC_ALL
+
+### Slackware architeture for slackbuilds
+export ARCH=x86_64
+
