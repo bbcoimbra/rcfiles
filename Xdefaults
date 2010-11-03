@@ -1,0 +1,7 @@
+XTerm*Background: black
+XTerm*Foreground: white
+XTerm*keyboardType: vt220
+XTerm*Locale: UTF-8
+XTerm*faceName: Bitstream Vera Serif Mono
+XTerm*faceSize: 16
+XTerm*geometry: 92x28
