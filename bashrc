@@ -1,6 +1,15 @@
 ### load system profile if exists
 [[ -s /etc/profile ]] && source /etc/profile
 
+### terminal settings
+# enable colors
+if [ "$TERM" = "xterm" ]; then
+	export TERM="xterm-color"
+fi
+
+# remove binding for stop terminal (default ^S)
+stty stop ''
+
 ### History control
 HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=1024
