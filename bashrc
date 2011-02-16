@@ -16,9 +16,6 @@ export CLASSPATH
 ### Editors Preferences
 export EDITOR=vim VISUAL=vim
 
-### Set colors for ls
-eval $(dircolors)
-
 ### less options
 # -R raw mode
 # -S don't wrap lines
@@ -34,6 +31,9 @@ export LESSCHARSET="utf-8"
 ### Android Settings
 #export ANDROID_SDK=$HOME/android/sdk
 #export PATH="$ANDROID_SDK/tools:$PATH"
+
+### Set colors for ls
+eval $(dircolors)
 
 ### Load some files
 [[ -s "$HOME/.bash.d/alias" ]] && source "$HOME/.bash.d/alias"
