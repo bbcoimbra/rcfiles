@@ -24,6 +24,7 @@ eval $(dircolors)
 # -S don't wrap lines
 # -M long prompt (verbose)
 export LESS="-M -S -R"
+export LESSCHARSET="utf-8"
 
 ### Some perl settings (local::lib)
 #PERL_MM_USE_DEFAULT=1
