@@ -11,7 +11,7 @@ CLASSPATH="$HOME/lib/java/beaver.jar:$HOME/lib/java:/usr/lib64/java/jre/lib:/usr
 export CLASSPATH
 
 ### set PATH so it includes user's private bin if it exists
-[[ -d ~/bin ]] && PATH=~/bin:"${PATH}"
+[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:${PATH}"
 
 ### Editors Preferences
 export EDITOR=vim VISUAL=vim
