@@ -51,3 +51,10 @@ _RVM_PROMPT="${RED}\$(~/.rvm/bin/rvm-prompt u g)"
 _GIT_PROMPT="${YELLOW}\$(__git_ps1 \"(%s)\")"
 _LOCAL_PROMPT="${GREEN}\u${WHITE}@${BOLD}${GREEN}\h:${BOLD}${CYAN}\W${BOLD}${WHITE}"
 PS1="${_RVM_PROMPT}${_GIT_PROMPT}${_LOCAL_PROMPT}${CLEAR}\$ "
+
+### Locale Settings
+LANG=en_US.utf8
+GDM_LANG=en_US.utf8
+LC_COLLATE=C # for ascii sort
+export LANG GDM_LANG LC_COLLATE
+
