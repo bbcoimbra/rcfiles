@@ -59,7 +59,7 @@ export IRBRC="$HOME/.irbrc"
 _RVM_PROMPT="${RED}\$(~/.rvm/bin/rvm-prompt u g)"
 _GIT_PROMPT="${YELLOW}\$(__git_ps1 \"(%s)\")"
 _LOCAL_PROMPT="${GREEN}\u${WHITE}@${BOLD}${GREEN}\h:${BOLD}${CYAN}\W${BOLD}${WHITE}"
-PS1="${_RVM_PROMPT}${_GIT_PROMPT}${_LOCAL_PROMPT}${CLEAR}\$ "
+PS1="${_RVM_PROMPT}${_GIT_PROMPT}${_LOCAL_PROMPT}${CLEAR}\\$ "
 
 ### Locale Settings
 LANG=en_US.utf8
