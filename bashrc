@@ -16,7 +16,14 @@ HISTSIZE=1024
 export HISTCONTROL HISTSIZE
 
 ### Java Classpath
-CLASSPATH="$HOME/lib/java/beaver.jar:$HOME/lib/java:/usr/lib64/java/jre/lib:/usr/lib64/java/lib:.:.."
+if [[ -d "$HOME/lib/java" ]] ; then
+	MYCLASSPATH="$HOME/lib/java"
+	for jar in $HOME/lib/java/*.jar ; do
+		MYCLASSPATH="$jar:$MYCLASSPATH"
+	done
+	MYCLASSPATH="$MYCLASSPATH:"
+fi
+CLASSPATH=".:..:$MYCLASSPATH/usr/lib64/java/jre/lib:/usr/lib64/java/lib"
 export CLASSPATH
 
 ### set PATH so it includes user's private bin if it exists
