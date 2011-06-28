@@ -3,24 +3,19 @@
   [Layer]	{2}
 [end]
 [app] (name=pidgin) (class=Pidgin) (role=conversation)
-  [Workspace]	{1}
+  [Workspace]	{4}
   [Dimensions]	{575 504}
   [Position]	(UPPERLEFT)	{636 497}
 [end]
 [app] (name=xterm) (class=XTerm)
-  [Dimensions]	{574 495}
-  [Position]	(UPPERLEFT)	{636 0}
+  [Dimensions]	{1280 760}
+  [Position]	(UPPERLEFT)	{0 0}
 [end]
 [app] (name=Navigator) (class=Firefox) (role=browser)
   [Workspace]	{2}
-  [Dimensions]	{1212 777}
-  [Position]	(UPPERLEFT)	{0 0}
-[end]
-[app] (name=Mail) (class=Thunderbird) (role=3pane)
-  [Workspace]	{3}
-  [Dimensions]	{1212 777}
+  [Dimensions]	{1226 743}
   [Position]	(UPPERLEFT)	{0 0}
 [end]
 [app] (name=Pidgin) (class=Pidgin) (role=buddy_list)
-  [Workspace]	{1}
+  [Workspace]	{4}
 [end]

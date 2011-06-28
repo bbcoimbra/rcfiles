@@ -44,7 +44,7 @@
 /usr/bin/gkrellm &
 /usr/bin/firefox &
 /usr/bin/pidgin &
-/usr/bin/Terminal &
+/usr/bin/xterm &
 /usr/bin/wicd-client &
 
 # And last but not least we start fluxbox.
