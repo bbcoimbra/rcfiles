@@ -1,7 +1,7 @@
 XTerm*Background: black
 XTerm*Foreground: gray
 XTerm*keyboardType: vt220
-XTerm*Utf8: 2
+XTerm*Utf8: 1
 XTerm*faceName: Bitstream Vera Sans Mono
 XTerm*faceSize: 14
 XTerm*faceSize1: 8
@@ -11,3 +11,8 @@ XTerm*faceSize4: 12
 XTerm*faceSize5: 16
 XTerm*faceSize6: 20
 XTerm*geometry: 92x28
+XTerm*Locale: true
+URxvt*background: black
+URxvt*foreground: gray
+URxvt*font: -*-terminal-medium-*-*-*-*-140-*-*-*-*-iso8859-1
+URxvt*imLocale: en_US.UTF-8
