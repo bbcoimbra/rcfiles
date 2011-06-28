@@ -73,8 +73,10 @@ _LOCAL_PROMPT="${GREEN}\u${WHITE}@${BOLD}${GREEN}\h:${BOLD}${CYAN}\W${BOLD}${WHI
 PS1="${_RVM_PROMPT}${_GIT_PROMPT}${_LOCAL_PROMPT}${CLEAR}\\$ "
 
 ### Locale Settings
-LANG=en_US.utf8
-GDM_LANG=en_US.utf8
+LANG='en_US.utf8'
+GDM_LANG='en_US.utf8'
 LC_COLLATE=C # for ascii sort
-export LANG GDM_LANG LC_COLLATE
+LANGUAGE='en_us.utf8'
+export LANG GDM_LANG LC_COLLATE LANGUAGE
+
 
