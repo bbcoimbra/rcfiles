@@ -79,4 +79,8 @@ LC_COLLATE=C # for ascii sort
 LANGUAGE='en_us.utf8'
 export LANG GDM_LANG LC_COLLATE LANGUAGE
 
+### E-Mail Settings
+MAIL=$HOME/Mail/inbox/
+MAILDIR=$MAIL
+export MAIL MAILDIR
 
