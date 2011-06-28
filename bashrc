@@ -44,6 +44,10 @@ export LESSCHARSET="UTF-8"
 #export PERL_MM_USE_DEFAULT
 #eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
 
+### Eclipse settings
+PATH="/opt/eclipse:$PATH"
+export PATH
+
 ### Android Settings
 #export ANDROID_SDK=$HOME/android/sdk
 #export PATH="$ANDROID_SDK/tools:$PATH"
