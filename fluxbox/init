@@ -59,7 +59,7 @@ session.screen0.userFollowModel:	SemiFollow
 session.screen0.menuMode:	Delay
 session.screen0.workspaceNames:	one,two,three,four,
 session.screen0.focusLastWindow:	True
-session.screen0.workspaces:	4
+session.screen0.workspaces:	9
 session.screen0.windowPlacement:	RowSmartPlacement
 session.screen0.colPlacementDirection:	TopToBottom
 session.screen0.noFocusWhileTypingDelay:	0l

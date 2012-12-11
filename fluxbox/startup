@@ -23,13 +23,13 @@
 # xset r rate 195 35
 #
 # Your own fonts-dir:
-# xset +fp "/home/bruno/.fonts"
+xset +fp "/home/bruno/.fonts"
 #
 # Your favourite mouse cursor:
 # xsetroot -cursor_name right_ptr
 #
 # Change your keymap:
-# xmodmap "/home/bruno/.Xmodmap"
+/usr/bin/xmodmap "/home/bruno/.Xmodmap"
 
 
 
@@ -42,10 +42,10 @@
 # idesk &
 
 /usr/bin/gkrellm &
-/usr/bin/firefox &
+/usr/bin/google-chrome &
 /usr/bin/pidgin &
 /usr/bin/xterm &
-/usr/bin/wicd-client &
+/usr/bin/ktorrent &
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.

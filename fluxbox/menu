@@ -15,10 +15,10 @@
 #   you can change the menu name in .fluxbox/init to:
 #     session.menuFile: /home/you/.fluxbox/my-menu
 [begin] (Fluxbox-1.0rc3)
-      [commanddialog] (run)
+      [exec] (run) {/usr/bin/fbrun}
       [exec] (term) {/usr/bin/xterm}
-      [exec] (firefox) {firefox}
-      [exec] (thunderbird) {thunderbird}
+      [exec] (chrome) {/usr/bin/google-chrome}
+      [exec] (gmusicbrowser) {gmusicbrowser}
       [exec] (pidgin) {pidgin}
       [exec] (gkrellm) {gkrellm}
       [exec] (wicd) {wicd-client}

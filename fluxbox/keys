@@ -40,7 +40,5 @@ Mod4 F10 :Workspace 10
 Mod4 F11 :Workspace 11
 Mod4 F12 :Workspace 12
 
-
-
-
-
+XF86MonBrightnessUp :execCommand $HOME/brightup 100
+XF86MonBrightnessDown :execCommand $HOME/brigtdown 100

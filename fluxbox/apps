@@ -17,5 +17,41 @@
   [Position]	(UPPERLEFT)	{0 0}
 [end]
 [app] (name=Pidgin) (class=Pidgin) (role=buddy_list)
+  [Workspace]	{3}
+  [Dimensions]	{285 563}
+  [Position]	(UPPERLEFT)	{0 17}
+[end]
+[app] (name=google-chrome) (class=Google-chrome) (role=browser)
+  [Workspace]	{2}
+  [Dimensions]	{1282 745}
+  [Position]	(UPPERLEFT)	{0 0}
+[end]
+[app] (name=Pidgin) (class=Pidgin) (role=conversation)
+  [Workspace]	{3}
+  [Dimensions]	{708 563}
+  [Position]	(UPPERLEFT)	{287 16}
+[end]
+[app] (name=skype) (class=Skype)
+  [Workspace]	{3}
+  [Dimensions]	{266 564}
+  [Position]	(UPPERLEFT)	{1001 17}
+[end]
+[app] (name=gmusicbrowser) (class=Gmusicbrowser) (role=EeePC)
   [Workspace]	{4}
+  [Dimensions]	{1284 747}
+  [Position]	(UPPERLEFT)	{0 -1}
+[end]
+[app] (name=gmusicbrowser) (class=Gmusicbrowser) (role=Lists, Library & Context)
+  [Workspace]	{4}
+  [Dimensions]	{1282 731}
+  [Position]	(UPPERLEFT)	{0 0}
+[end]
+[app] (name=amarok) (class=Amarok) (role=MainWindow)
+  [Workspace]	{4}
+  [Dimensions]	{1280 747}
+  [Position]	(UPPERLEFT)	{0 0}
+[end]
+[app] (name=VCLSalFrame.DocumentWindow) (class=BrOffice.org 3.2)
+  [Dimensions]	{1282 746}
+  [Position]	(UPPERLEFT)	{0 0}
 [end]
