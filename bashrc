@@ -21,9 +21,9 @@ if [[ -d "$HOME/lib/java" ]] ; then
 	for jar in $HOME/lib/java/*.jar ; do
 		MYCLASSPATH="$jar:$MYCLASSPATH"
 	done
-	MYCLASSPATH="$MYCLASSPATH:"
+	MYCLASSPATH="$MYCLASSPATH"
 fi
-CLASSPATH=".:..:$MYCLASSPATH/usr/lib64/java/jre/lib:/usr/lib64/java/lib"
+CLASSPATH=".:..:$MYCLASSPATH:/usr/lib64/jdk1.7.0_07/jre/lib:/usr/lib64/jdk1.7.0_07/lib"
 export CLASSPATH
 
 ### set PATH so it includes user's private bin if it exists
@@ -49,8 +49,8 @@ PATH="/opt/eclipse:$PATH"
 export PATH
 
 ### Android Settings
-#export ANDROID_SDK=$HOME/android/sdk
-#export PATH="$ANDROID_SDK/tools:$PATH"
+export ANDROID_SDK=$HOME/.android/sdk
+export PATH="$ANDROID_SDK/tools:$PATH"
 
 ### Set colors for ls
 eval $(dircolors)
@@ -76,7 +76,7 @@ PS1="${_RVM_PROMPT}${_GIT_PROMPT}${_LOCAL_PROMPT}${CLEAR}\\$ "
 LANG='en_US.utf8'
 GDM_LANG='en_US.utf8'
 LC_COLLATE=C # for ascii sort
-LANGUAGE='en_us.utf8'
+LANGUAGE='en_US.utf8'
 export LANG GDM_LANG LC_COLLATE LANGUAGE
 
 ### E-Mail Settings
@@ -84,3 +84,9 @@ MAIL=$HOME/Mail/inbox/
 MAILDIR=$MAIL
 export MAIL MAILDIR
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Heroku path
+PATH="/usr/local/heroku/bin:$PATH"
+export PATH

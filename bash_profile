@@ -9,14 +9,3 @@
 
 # include .bashrc if it exists
 [[ -f ~/.bashrc ]] && source $HOME/.bashrc
-
-### set Language preferences
-LANGUAGE="en_US"
-LC_ALL="C"
-unset LC_COLLATE
-export LANG=en_US
-export LANGUAGE LC_ALL
-
-### Slackware architeture for slackbuilds
-export ARCH=x86_64
-
