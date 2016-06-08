@@ -21,12 +21,9 @@ export HISTCONTROL HISTSIZE
 ### Editors Preferences
 export EDITOR=vim VISUAL=vim
 
-### Set colors for ls
-eval $(dircolors)
-
 ### Load .bash.d/*.bash files
 for file in $HOME/.bash.d/*.bash ; do
-	source file
+	source $file
 done
 
 ### PS1 Settings
