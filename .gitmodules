@@ -1,6 +1,3 @@
-[submodule "vimdir"]
-	path = vimdir
-	url = git://github.com/bbcoimbra/vimdir.git
 [submodule "bash_configs"]
 	path = bash_configs
 	url = git://github.com/bbcoimbra/bash_configs.git
