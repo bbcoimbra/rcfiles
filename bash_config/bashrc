@@ -15,9 +15,6 @@ HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=1024
 export HISTCONTROL HISTSIZE
 
-### set PATH so it includes user's private bin if it exists
-[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:${PATH}"
-
 ### Editors Preferences
 export EDITOR=vim VISUAL=vim
 
@@ -25,6 +22,9 @@ export EDITOR=vim VISUAL=vim
 for file in $HOME/.bash.d/*.bash ; do
 	source $file
 done
+
+### set PATH so it includes user's private bin if it exists
+[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:${PATH}"
 
 ### PS1 Settings
 _GIT_PROMPT="${YELLOW}\$(__git_ps1 \"(%s)\")"
