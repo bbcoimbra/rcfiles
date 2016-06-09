@@ -1,0 +1,18 @@
+[user]
+	email = bbcoimbra@gmail.com
+	name = Bruno Coimbra
+[github]
+	user = bbcoimbra
+[alias]
+	s = status -s -b
+[core]
+	excludesfile = ~/.gitignore
+[push]
+	default = matching
+[diff]
+	color = true
+[http]
+	postBuffer = 524288000
+[color]
+	status = true
+	ui = true
