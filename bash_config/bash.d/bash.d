@@ -1,1 +1,0 @@
-/Users/bruno/projects/personal/rcfiles/bash_config/bash.d
