@@ -1,0 +1,4 @@
+--ignore-dir=vendor/gems
+--ignore-dir=log/
+--ignore-dir=db/
+--pager=less
