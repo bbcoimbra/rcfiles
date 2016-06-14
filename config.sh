@@ -2,7 +2,7 @@
 set -e
 
 CUR_DIR="$(pwd)"
-for file in gemrc gitconfig gitignore irbrc tmux.conf ; do
+for file in gemrc gitconfig gitignore irbrc tmux.conf muttrc ; do
 	echo -ne "linking '$CUR_DIR/$file' -> '$HOME/.$file'\n"
   ln -F -s "$CUR_DIR/$file" ~/.$file
 done

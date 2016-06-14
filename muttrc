@@ -1,0 +1,34 @@
+set charset=UTF-8
+set config_charset=UTF-8
+
+set realname = "Bruno Coimbra"
+set from = "bbcoimbra@gmail.com"
+
+set status_on_top = yes
+
+set mbox_type = Maildir
+
+set check_new = yes # when mutt starts
+set mail_check = 30 # and every %i seconds
+set mark_old = no
+mailboxes +inbox/
+
+set confirmappend = no # before move between folders
+set delete = yes # remove msg market for deletion withou prompt
+
+set sort = threads
+set sort_aux = reverse-date
+set collapse_unread = yes
+
+set folder = $HOME/Mail/
+set tmpdir = +tmp/
+set spoolfile = +inbox/
+set postponed = +tmp/
+set record = +sent/
+
+ignore *
+unignore from date subject to cc
+unignore organization organisation x-mailer: x-newsreader: x-mailing-list:
+unignore posted-to:
+
+set header_cache = +cache
