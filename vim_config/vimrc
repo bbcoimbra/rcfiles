@@ -40,7 +40,6 @@ if &termencoding == "utf-8"
 	set list
 endif
 
-set nocompatible
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
