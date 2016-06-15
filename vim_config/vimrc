@@ -19,26 +19,10 @@ Bundle 'mileszs/ack.vim'
 Bundle 'elzr/vim-json'
 call vundle#end()
 
-
-if has("gui_running")
-    set guioptions=egmrt
-    set showtabline=2
-endif
-
-""" fix for some stupid terms
-if &term == "screen"
-	set term=xterm
-	set termencoding="utf-8"
-endif
-
-""" set terminal encoding properly
-set termencoding="utf-8"
-
-""" some simbols to blank chars
-if &termencoding == "utf-8"
-	set listchars=tab:▹\ ,eol:¬
-	set list
-endif
+""" set encodings
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
 
 set tabstop=2
 set shiftwidth=2
@@ -98,22 +82,14 @@ compiler ruby
 colorscheme default
 set background=dark
 
-""" remapping leader to comma key
-let mapleader = ","
-
-nmap <leader>f :set foldmethod=indent<CR>
-nmap <leader>d :NERDTreeToggle<CR>
-nmap <leader>t :TlistToggle<CR>
-nmap <leader>w <c-w>w
-
 """ some sanite mappings
 cab WQ wq | cab Wq wq | cab W w | cab Q q
 
-""" Filetype specific settings
-au Filetype ruby set expandtab encoding=utf8
-au Filetype haml set ts=2 noet encoding=utf8
-au Filetype erb set ts=2 noet encoding=utf8
-au FileType yaml set encoding=utf8
-au FileType ant set encoding=utf8
-au FileType tex set encoding=utf8 tw=78 noet spell spelllang=pt-BR
+""" other useful mappings
+nmap - :Explore<cr>
 
+""" Filetype specific settings
+au Filetype ruby set expandtab
+au Filetype haml set ts=2 noet
+au Filetype erb set ts=2 noet
+au FileType tex set tw=78 noet spell spelllang=pt-BR
