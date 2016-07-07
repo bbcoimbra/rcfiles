@@ -24,14 +24,18 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 
+""" indent, tabs
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set smarttab
 set autoindent
-set noeol
+set smartindent
+
+""" for binary files don't change EOL
 set binary
+set noeol
 
 """ temporary files on one place (stolen from sryche/vimfiles on github)
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -50,10 +54,6 @@ set mouse=c
 """ no wrap lines (duh!)
 set nowrap
 
-""" indent control
-set autoindent
-set smartindent
-
 """ show match parentesis
 set showmatch
 
@@ -70,7 +70,11 @@ set statusline=%y\ %t\ %=\ %(%-l,%-c%-V\ %-P%)
 """ show reduced msgs
 set shm=filmnrwxt
 
+""" display long lines with breaks but don't include EOL in wrap mode
 set linebreak
+
+""" fix clipboard
+set clipboard=unnamed
 
 """ syntax colors
 syntax on
