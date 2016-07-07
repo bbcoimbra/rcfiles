@@ -1,6 +1,3 @@
-### load system profile if exists
-[[ -s /etc/profile ]] && source /etc/profile
-
 ### terminal settings
 # enable colors
 if [ "$TERM" = "xterm" ]; then
