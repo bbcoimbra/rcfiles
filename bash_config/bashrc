@@ -17,7 +17,7 @@ export EDITOR=vim VISUAL=vim
 
 ### Load .bash.d/*.bash files
 for file in $HOME/.bash.d/*.bash ; do
-	source $file
+	[[ -f $file ]] && source $file
 done
 
 ### set PATH so it includes user's private bin if it exists
