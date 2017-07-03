@@ -15,15 +15,13 @@ export HISTCONTROL HISTSIZE
 ### Editors Preferences
 export EDITOR=vim VISUAL=vim
 
+### set PATH so it includes user's private bin if it exists
+[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:${PATH}"
+PATH="./bin:${PATH}"
+export PATH
+
+
 ### Load .bash.d/*.bash files
 for file in $HOME/.bash.d/*.bash ; do
 	[[ -f $file ]] && source $file
 done
-
-### set PATH so it includes user's private bin if it exists
-[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:${PATH}"
-
-### PS1 Settings
-_GIT_PROMPT="${YELLOW}\$(__git_ps1 \"(%s)\")"
-_LOCAL_PROMPT="${GREEN}\u${WHITE}@${BOLD}${GREEN}\h:${BOLD}${CYAN}\W${BOLD}${WHITE}"
-PS1="${_GIT_PROMPT}${_LOCAL_PROMPT}${CLEAR}\\$ "
