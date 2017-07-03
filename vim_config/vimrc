@@ -18,6 +18,12 @@ Bundle 'mattn/emmet-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'elzr/vim-json'
 call vundle#end()
+filetype indent plugin on
+
+""" syntax colors
+syntax on
+colorscheme default
+set background=dark
 
 """ set encodings
 set encoding=utf-8
@@ -75,16 +81,6 @@ set linebreak
 
 """ fix clipboard
 set clipboard=unnamed
-
-""" syntax colors
-syntax on
-filetype on
-filetype indent on
-filetype plugin on
-compiler ruby
-
-colorscheme default
-set background=dark
 
 """ some sanite mappings
 cab WQ wq | cab Wq wq | cab W w | cab Q q
