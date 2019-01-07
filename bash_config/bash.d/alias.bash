@@ -1,4 +1,4 @@
-LS_OPTIONS="-F -b -G"
+LS_OPTIONS="-F -b -G --color=auto"
 alias ls="ls $LS_OPTIONS"
 alias tmux="tmux -u -2"
 alias be="bundle exec"

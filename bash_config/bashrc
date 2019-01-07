@@ -3,6 +3,9 @@
 if [ "$TERM" = "xterm" ]; then
 	export TERM="xterm-color"
 fi
+if [ ! -z "$TMUX" ]; then
+	export TERM="screen-256color"
+fi
 
 # remove binding for stop terminal (default ^S)
 stty stop ''
@@ -17,7 +20,8 @@ export EDITOR=vim VISUAL=vim
 
 ### set PATH so it includes user's private bin if it exists
 [[ -d "$HOME/bin" ]] && PATH="$HOME/bin:${PATH}"
-PATH="./bin:${PATH}"
+### also includes any bin dir in current path, but less priority
+PATH="${PATH}:./bin"
 export PATH
 
 

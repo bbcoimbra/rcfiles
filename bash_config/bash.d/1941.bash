@@ -1,0 +1,1 @@
+export BLAZER_DATABASE_URL="postgresql://lhclasses:lhclasses123@localhost:5432/lhclasses_development"

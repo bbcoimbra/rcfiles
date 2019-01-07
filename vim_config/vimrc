@@ -17,6 +17,8 @@ Bundle 'mattn/gist-vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'elzr/vim-json'
+Bundle 'hashivim/vim-hashicorp-tools'
+Bundle 'fatih/vim-go'
 call vundle#end()
 filetype indent plugin on
 
@@ -85,11 +87,17 @@ set clipboard=unnamed
 """ some sanite mappings
 cab WQ wq | cab Wq wq | cab W w | cab Q q
 
-""" other useful mappings
+""" map explore to '-'
 nmap - :Explore<cr>
+
+""" map <esc><esc> to clear searches
+map! <esc><esc> :noh<CR>
 
 """ Filetype specific settings
 au Filetype ruby set expandtab
-au Filetype haml set ts=2 noet
-au Filetype erb set ts=2 noet
+au Filetype haml set ts=2 expandtab
+au Filetype html set ts=2 expandtab
+au Filetype erb set ts=2 et
 au FileType tex set tw=78 noet spell spelllang=pt-BR
+au FileType javascript set expandtab
+au FileType json set expandtab
